@@ -138,4 +138,4 @@ console.log('Enjoy the LoR Ryusei Senpai :)');
 
 
 
-bot.login(TOKEN);
+bot.login(process.env.BOT_TOKEN);
