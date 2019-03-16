@@ -77,9 +77,6 @@ bot.on("message", async function(message){
                 .setColor(0x00FFFF00);
             message.channel.sendEmbed(embed);
             break;
-        case "noticeme":
-            message.channel.sendMessage(message.author.toString() + " <@195319135868157954> will coming.");
-            break;
         case "play":
             if(!args[1]){
                 message.channel.sendMessage("Please provide a link.");
@@ -108,7 +105,7 @@ bot.on("message", async function(message){
             }
             else{
                 for(let i = 0 ; i < 100 ; i++){
-                    console.log(args[i]);
+                    message.channel.sendMessage(args[i]);
                 }
             }
             break;
@@ -116,15 +113,19 @@ bot.on("message", async function(message){
                 var server = servers[message.guild.id];
 
                 if(server.dispatcher) server.dispatcher.end();
+      
+                message.channel.sendMessage('Song Skipped');
             break;
         case "stop":
                 var server = servers[message.guild.id];
 
                 if(message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+                message.channel.sendMessage('Thank you for using LOR Bot by Ryusei "SgtRyu" Kasagawa');
             break;
         case "avatar":
+                message.channel.sendMessage('Here\'s your avatar bud!');
                 message.reply(message.author.avatarURL);
-            break;
+            break;e
         case "coin":
                 message.channel.send(message.author.toString() + " You Flipped: " + (hd[Math.floor(Math.random() * hd.length)]));
             break;
