@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
-const TOKEN = "NTIxMjQ5NDE0NjQ0NDk4NDQ2.DwedJQ.H26g_ATsvUdEM7FViiuY9qbTzjM";
+const TOKEN = "(YOUR TOKEN)";
 
 const command1 = "!";
  
